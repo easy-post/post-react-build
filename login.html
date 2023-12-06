@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="./css/login.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script defer src="./js/login.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="wrap" class="clearMarColl">
+    <div class="inner">
+      <h1><img src="./img/logo.png" alt="logo"></h1>
+      <form class="login--form" method="post">
+        <p class="failed empty">모두 입력해 주세요.</p>
+        <input type="text" name="loginId" placeholder="아이디" maxlength="16">
+        <input type="password" name="password" placeholder="비밀번호" autocomplete="on" maxlength="32">
+        <input type="submit" value="로그인">
+        <a href="javascript:void(0)">회원가입</a>
+      </form>
+      <p class="failed login--message"></p>
+    </div>
+
+    <div id="register--modal">
+      <div class="inner">
+        <form class="register--form" method="post">
+          <input type="text" name="loginId" placeholder="아이디" maxlength="16">
+          <div class="register--nickname--wrap">
+            <input type="text" name="nickname" id="nickname" placeholder="닉네임" maxlength="16">
+            <a href="javascript:void(0)">중복 확인</a>
+          </div>
+
+          <p class="success nickname--message">사용 가능한 닉네임 입니다!</p>
+          <p class="failed nickname--message">중복된 닉네임 입니다.</p>
+          <input type="password" name="password" placeholder="비밀번호" autocomplete="on" maxlength="32">
+          <input type="submit" value="회원가입">
+        </form>
+        <a href="javascript:void(0)" class="close"><span class="material-symbols-outlined">
+            close
+          </span></a>
+        <p class="success register--message">가입 완료.</p>
+        <p class="failed register--message"></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
